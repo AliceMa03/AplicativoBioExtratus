@@ -40,7 +40,9 @@ public class ProdutoModel implements Serializable {
         this.codBarras1 = codBarras1;
         this.codBarras2 = codBarras2;
     }
-
+    public String toString(){
+        return descricao.toString();
+    }
     public int getCodigo() {
         return codigo;
     }

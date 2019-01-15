@@ -80,7 +80,8 @@ public class ProdutosBD extends SQLiteOpenHelper {
     }
 
     public void deletarProduto(ProdutoModel produtos){
-
+        String[] args={DATABASE.toString()};
+        getWritableDatabase().delete("produtos",values,"codigo=?",args);
 
 
     }
