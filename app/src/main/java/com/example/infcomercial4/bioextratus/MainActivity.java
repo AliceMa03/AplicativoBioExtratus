@@ -24,7 +24,7 @@ import java.util.UUID;
 
 
 
-public class MainActivity extends AppCompatActivity implements OnProductListener {
+public abstract class MainActivity extends AppCompatActivity implements OnProductListener {
 
     private ArrayList<ProductModel> products;
     private ProductCreateFragment createFragment = null;
@@ -38,14 +38,8 @@ public class MainActivity extends AppCompatActivity implements OnProductListener
 
         this.createFragment = null;
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                createFragment = new ProductCreateFragment();
-                replaceFragment(createFragment);
-            }
-        });
+        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        toolbar.setOnClickListener();
 
         this.products = fakeList();
 
@@ -99,16 +93,16 @@ public class MainActivity extends AppCompatActivity implements OnProductListener
         return result;
     }
 
-    @Override
+
     public void beforeCreate(ProductModel model) {
         this.products.add(model);
         createProductList();
     }
 
-    @Override
+
     public void barcodeCapture(ProductModel model) {
-        IntentIntegrator intent = new IntentIntegrator(MainActivity.this);
-        intent.initiateScan();
+        //IntentIntegrator intent = new IntentIntegrator(MainActivity.this);
+        //intent.initiateScan();
     }
 
     @Override
@@ -116,16 +110,6 @@ public class MainActivity extends AppCompatActivity implements OnProductListener
         createProductList();
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if (result != null) {
-            String barcode = result.getContents();
-            if (barcode != null && !"".equals(barcode)) {
-                createFragment.setBarCode(barcode);
-            }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-    }
+
+
 }
