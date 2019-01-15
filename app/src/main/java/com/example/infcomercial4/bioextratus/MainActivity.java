@@ -1,6 +1,5 @@
 package com.example.infcomercial4.bioextratus;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -9,24 +8,22 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 import com.example.infcomercial4.bioextratus.fragments.ProductCreateFragment;
 import com.example.infcomercial4.bioextratus.fragments.ProductListFragment;
 import com.example.infcomercial4.bioextratus.interfaces.OnProductListener;
-import com.example.infcomercial4.bioextratus.model.ProductModel;
+import com.example.infcomercial4.bioextratus.model.InventarioModel;
 
 import java.util.ArrayList;
-import java.util.UUID;
-
 
 
 public abstract class MainActivity extends AppCompatActivity implements OnProductListener {
 
-    private ArrayList<ProductModel> products;
+    private ArrayList<InventarioModel> products;
     private ProductCreateFragment createFragment = null;
 
     @Override
@@ -37,8 +34,16 @@ public abstract class MainActivity extends AppCompatActivity implements OnProduc
         setSupportActionBar(toolbar);
 
         this.createFragment = null;
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createFragment = new ProductCreateFragment();
+                replaceFragment(createFragment);
+            }
+        });
 
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
         toolbar.setOnClickListener();
 
         this.products = fakeList();
@@ -87,20 +92,20 @@ public abstract class MainActivity extends AppCompatActivity implements OnProduc
         ft.commit();
     }
 
-    public ArrayList<ProductModel> fakeList() {
-        ArrayList<ProductModel> result = new ArrayList<ProductModel>();
+    public ArrayList<InventarioModel> fakeList() {
+        ArrayList<InventarioModel> result = new ArrayList<InventarioModel>();
 
         return result;
     }
 
 
-    public void beforeCreate(ProductModel model) {
+    public void beforeCreate(InventarioModel model) {
         this.products.add(model);
         createProductList();
     }
 
 
-    public void barcodeCapture(ProductModel model) {
+    public void barcodeCapture(InventarioModel model) {
         //IntentIntegrator intent = new IntentIntegrator(MainActivity.this);
         //intent.initiateScan();
     }

@@ -2,16 +2,14 @@ package com.example.infcomercial4.bioextratus.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.example.infcomercial4.bioextratus.R;
 
-import com.example.infcomercial4.bioextratus.model.ProductModel;
+import com.example.infcomercial4.bioextratus.model.InventarioModel;
 import com.example.infcomercial4.bioextratus.interfaces.OnProductListener;
 
 import java.util.UUID;
@@ -27,13 +25,13 @@ public class ProductCreateFragment extends Fragment {
     private Button btnCapture;
     private Button btnAdd;
     private Button btnCancel;
-    private ProductModel model;
+    private InventarioModel model;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         View layout = inflater.inflate(R.layout.product_create_model, container, false);
 
-        this.model = new ProductModel(UUID.randomUUID().toString(), "", "", 0);
+        this.model = new InventarioModel(UUID.randomUUID().toString(), "", "", 0);
 
         this.txtCodigo = (EditText)layout.findViewById(R.id.txtCodigo);
         this.txtQuantidade = (EditText)layout.findViewById(R.id.txtQuantidade);

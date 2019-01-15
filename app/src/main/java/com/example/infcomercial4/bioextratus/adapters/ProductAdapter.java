@@ -6,13 +6,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.infcomercial4.bioextratus.model.ProductModel;
+import com.example.infcomercial4.bioextratus.model.InventarioModel;
 
 import java.util.List;
 
-public class ProductAdapter extends CustomAdapter<ProductModel, ProductAdapter.ProductViewHolder> {
+public class ProductAdapter extends CustomAdapter<InventarioModel, ProductAdapter.ProductViewHolder> {
 
-    public ProductAdapter(Context ctx, List<ProductModel> list) {
+    public ProductAdapter(Context ctx, List<InventarioModel> list) {
         super(ctx, list);
     }
 
@@ -22,7 +22,7 @@ public class ProductAdapter extends CustomAdapter<ProductModel, ProductAdapter.P
     }
 
     @Override
-    public ProductViewHolder createHolder(ProductModel model, int position, View convertView, ViewGroup parent) {
+    public ProductViewHolder createHolder(InventarioModel model, int position, View convertView, ViewGroup parent) {
         ProductViewHolder holder = new ProductViewHolder();
         holder.imgCode = (ImageView)convertView.findViewById(R.id.imgCode);
         holder.lblCode = (TextView)convertView.findViewById(R.id.lblCode);
@@ -32,7 +32,7 @@ public class ProductAdapter extends CustomAdapter<ProductModel, ProductAdapter.P
     }
 
     @Override
-    public void updateHolder(ProductViewHolder holder, ProductModel model, int position, View convertView, ViewGroup parent){
+    public void updateHolder(ProductViewHolder holder, InventarioModel model, int position, View convertView, ViewGroup parent){
         holder.lblCode.setText(model.BarCode);
         //holder.lblName.setText(model.Name);
         //holder.lblPrice.setText("R$ " + String.valueOf(model.Price));

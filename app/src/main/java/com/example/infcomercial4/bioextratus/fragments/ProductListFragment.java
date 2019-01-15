@@ -8,19 +8,19 @@ import android.widget.ListView;
 
 import com.example.infcomercial4.bioextratus.adapters.ProductAdapter;
 import com.example.infcomercial4.bioextratus.interfaces.OnItemSelectedListener;
-import com.example.infcomercial4.bioextratus.model.ProductModel;
+import com.example.infcomercial4.bioextratus.model.InventarioModel;
 
 import java.util.ArrayList;
 
 public class ProductListFragment extends ListFragment {
 
-    private ArrayList<ProductModel> list;
+    private ArrayList<InventarioModel> list;
     private ProductAdapter adp;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
-        ArrayList<ProductModel> dataSource = dataSource = (ArrayList<ProductModel>)getArguments().getSerializable("dataSource");
+        ArrayList<InventarioModel> dataSource = dataSource = (ArrayList<InventarioModel>)getArguments().getSerializable("dataSource");
         adp = new ProductAdapter(getActivity(), dataSource);
         setListAdapter(adp);
 

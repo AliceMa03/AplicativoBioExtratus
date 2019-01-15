@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.infcomercial4.bioextratus.CadastrarProdutoActivity" >
+
+    <EditText
+        android:id="@+id/editTEPadrao"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="266dp"
+        tools:layout_editor_absoluteY="185dp" />
+
+    <EditText
+        android:id="@+id/editTSPadrao"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="236dp" />
+
+    <EditText
+        android:id="@+id/editSegUnMed"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="279dp"
+        tools:layout_editor_absoluteY="236dp" />
+
+    <EditText
+        android:id="@+id/editFatorCon"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="272dp"
+        tools:layout_editor_absoluteY="275dp" />
+
+    <EditText
+        android:id="@+id/editOrdExp"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="323dp" />
+
+    <EditText
+        android:id="@+id/editTipo"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="58dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <EditText
+        android:id="@+id/editUnidade"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <EditText
+        android:id="@+id/editArmazem"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="185dp" />
+
+    <EditText
+        android:id="@+id/editLinhaProd"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="107dp" />
+
+    <EditText
+        android:id="@+id/editVolumetria"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="282dp"
+        tools:layout_editor_absoluteY="107dp" />
+
+    <TextView
+        android:id="@+id/txtCodigo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Código:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+    android:id="@+id/txtDescricao"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Descrição:"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="49dp" />
+
+    <TextView
+        android:id="@+id/txtGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grupo:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <TextView
+        android:id="@+id/txtFamilia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Família Linha:"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <TextView
+        android:id="@+id/txtLinha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linha Prod:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/txtVolumetria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volumetria:"
+        tools:layout_editor_absoluteX="200dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/txtTipo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <TextView
+        android:id="@+id/txtUnidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unidade:"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="162dp" />
+
+    <TextView
+        android:id="@+id/txtArmazem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Armazém:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <TextView
+        android:id="@+id/txtTePadrao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TE Padrão:"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <TextView
+        android:id="@+id/txtTsPadrao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TS Padrão:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <TextView
+        android:id="@+id/txtSegUnMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seg.Un.Med:"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <TextView
+        android:id="@+id/txtTipoConv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Conv:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <TextView
+        android:id="@+id/txtFatorConv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fator Conv:"
+        tools:layout_editor_absoluteX="194dp"
+        tools:layout_editor_absoluteY="293dp" />
+
+    <TextView
+        android:id="@+id/txtOrdExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ord Exp:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="336dp" />
+
+    <TextView
+        android:id="@+id/txtCodBarras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Código de Barras:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="373dp" />
+
+    <TextView
+        android:id="@+id/txtCodBarras1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Código de Barras 1:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="410dp" />
+
+    <TextView
+        android:id="@+id/txtCodBarras2"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:text="Código de Barras 2:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="448dp" />
+
+    <Button
+        android:id="@+id/btnIncluir"
+        android:layout_width="83dp"
+        android:layout_height="40dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Incluir"
+        android:textColor="@color/colorText"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="466dp" />
+
+    <Button
+        android:id="@+id/btnAlterar"
+        android:layout_width="87dp"
+        android:layout_height="41dp"
+        android:text="Alterar"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/colorText"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="465dp" />
+
+    <EditText
+        android:id="@+id/editCodigo"
+        android:layout_width="182dp"
+        android:layout_height="24dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/editGrupo"
+        android:layout_width="75dp"
+        android:layout_height="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="82dp" />
+
+    <EditText
+        android:id="@+id/editFamLin"
+        android:layout_width="86dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="282dp"
+        tools:layout_editor_absoluteY="68dp" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="65dp"
+        android:layout_height="20dp"
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="292dp" />
+
+    <Button
+        android:id="@+id/btnCapture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Capturar Codigo de Barras"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="506dp" />
+
+
+
+    <EditText
+        android:id="@+id/editCodBarras"
+        android:layout_width="210dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="362dp" />
+
+    <EditText
+        android:id="@+id/editCodBarras1"
+        android:layout_width="210dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="142dp"
+        tools:layout_editor_absoluteY="400dp" />
+
+</android.support.constraint.ConstraintLayout>
