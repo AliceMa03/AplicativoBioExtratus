@@ -113,30 +113,7 @@ public class CadastrarProdutoActivity extends AppCompatActivity {
         carregarProduto();
     }
 
-    private void cadastrarUsuario(){
 
-        //Cria objeto usuario
-        ParseUser usuario = new ParseUser();
-        usuario.setUsername( textoUsuario.getText().toString() );
-        usuario.setEmail( textoEmail.getText().toString() );
-        usuario.setPassword( textoSenha.getText().toString() );
-
-        //salva dados do usuario
-        usuario.signUpInBackground(new SignUpCallback() {
-            @Override
-            public void done(ParseException e) {
-                if( e==null ){//sucesso ao salvar
-                    Toast.makeText(CadastroActivity.this, "Cadastro feito com sucesso!", Toast.LENGTH_LONG).show();
-                    abrirLoginUsuario();
-                }else{//erro ao salvar
-                    ParseErros parseErros = new ParseErros();
-                    String erro = parseErros.getErro( e.getCode() );
-                    Toast.makeText(CadastroActivity.this, erro , Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-    }
     protected void onResume(){
         super.onResume();
         carregarProduto();

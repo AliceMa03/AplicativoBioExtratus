@@ -54,7 +54,7 @@ public class CadastrarInventario extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int i, long l) {
                 ProdutoModel produtoEscolhido = (ProdutoModel)adapter.getItemAtPosition(position);
-                Intent i = new Intent(CadastrarProdutoActivity.this,)
+                Intent i = new Intent(CadastrarInventario.this,)
                 i.putExtra("produto-esolhido",produtoEscolhido);
 
             }
@@ -63,7 +63,7 @@ public class CadastrarInventario extends AppCompatActivity {
 
         btnIncluir.setOnClickListener(new android.view.View.OnClickListener(){
             public void onClick(View v){
-                Intent intent= new Intent(CadastrarProdutoActivity.this,ListaProdutos.class);
+                Intent intent= new Intent(CadastrarInventario.this,ListaProdutos.class);
                 startActivity(intent);
             }
         });
@@ -109,12 +109,12 @@ public class CadastrarInventario extends AppCompatActivity {
             @Override
             public void done(ParseException e) {
                 if( e==null ){//sucesso ao salvar
-                    Toast.makeText(CadastroActivity.this, "Cadastro feito com sucesso!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(CadastrarInventario.this, "Cadastro feito com sucesso!", Toast.LENGTH_LONG).show();
                     abrirLoginUsuario();
                 }else{//erro ao salvar
                     ParseErros parseErros = new ParseErros();
                     String erro = parseErros.getErro( e.getCode() );
-                    Toast.makeText(CadastroActivity.this, erro , Toast.LENGTH_LONG).show();
+                    Toast.makeText(CadastrarInventario.this, erro , Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -126,12 +126,12 @@ public class CadastrarInventario extends AppCompatActivity {
 
     }
     public void carregarProduto(){
-        bd= new ProdutosBD(CadastrarProdutoActivity.this);
+        bd= new ProdutosBD(CadastrarInventario.this);
         listView_Produtos= bd.getLista();
         bd.close();
 
         if(listView_Produtos != null){
-            adapter = new ArrayAdapter<ProdutoModel>(CadastrarProdutoActivity.this,android.R.layout.simple_list_item_1,listView_Produtos);
+            adapter = new ArrayAdapter<ProdutoModel>(CadastrarInventario.this,android.R.layout.simple_list_item_1,listView_Produtos);
             lista.setAdapter(adapter);
         }
         finish();
