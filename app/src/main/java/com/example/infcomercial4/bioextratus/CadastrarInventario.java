@@ -96,35 +96,7 @@ public class CadastrarInventario extends AppCompatActivity {
         carregarProduto();
     }
 
-    private void cadastrarUsuario(){
 
-        //Cria objeto usuario
-        ParseUser usuario = new ParseUser();
-        usuario.setUsername( textoUsuario.getText().toString() );
-        usuario.setEmail( textoEmail.getText().toString() );
-        usuario.setPassword( textoSenha.getText().toString() );
-
-        //salva dados do usuario
-        usuario.signUpInBackground(new SignUpCallback() {
-            @Override
-            public void done(ParseException e) {
-                if( e==null ){//sucesso ao salvar
-                    Toast.makeText(CadastrarInventario.this, "Cadastro feito com sucesso!", Toast.LENGTH_LONG).show();
-                    abrirLoginUsuario();
-                }else{//erro ao salvar
-                    ParseErros parseErros = new ParseErros();
-                    String erro = parseErros.getErro( e.getCode() );
-                    Toast.makeText(CadastrarInventario.this, erro , Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-    }
-    protected void onResume(){
-        super.onResume();
-        carregarProduto();
-
-    }
     public void carregarProduto(){
         bd= new ProdutosBD(CadastrarInventario.this);
         listView_Produtos= bd.getLista();
