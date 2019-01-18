@@ -28,7 +28,7 @@ public class InventarioCreateFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View layout = inflater.inflate(R.layout.inventario_actitivty, container, false);
+        View layout = inflater.inflate(R.layout.inventario_actitiviy, container, false);
 
         this.model = new InventarioModel(UUID.randomUUID().toString(), "", "", 0);
 

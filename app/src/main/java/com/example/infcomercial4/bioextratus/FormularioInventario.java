@@ -21,7 +21,7 @@ public class FormularioInventario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.inventario_activiy);
+        setContentView(R.layout.inventario_activity);
 
         Intent intent = getIntent();
         editarInventario = (InventarioModel) intent.getSerializableExtra("produto-escolhido");

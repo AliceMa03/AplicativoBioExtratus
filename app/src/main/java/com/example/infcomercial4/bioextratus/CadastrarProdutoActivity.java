@@ -68,7 +68,7 @@ public class CadastrarProdutoActivity extends AppCompatActivity {
 
 
         btnIncluir.setOnClickListener();
-        lista=(ListView)findViewById(R.id.);
+        //lista=(ListView)findViewById(R.id.);
 
         registerForContextMenu(lista);
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {

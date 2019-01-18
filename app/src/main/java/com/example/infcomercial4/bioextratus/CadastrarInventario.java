@@ -11,7 +11,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.infcomercial4.bioextratus.BDbioextratus.ProdutosBD;
 import com.example.infcomercial4.bioextratus.model.InventarioModel;
@@ -36,7 +35,7 @@ public class CadastrarInventario extends AppCompatActivity {
     protected void onCreate (Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.inventario_activiy);
+        setContentView(R.layout.inventario_activity);
 
         txtCodigo =(EditText)findViewById(R.id.txtCodigo);
         txtDescricao =(EditText)findViewById(R.id.txtDescricao);
