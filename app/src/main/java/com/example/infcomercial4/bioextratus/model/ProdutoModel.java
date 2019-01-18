@@ -1,27 +1,30 @@
 package com.example.infcomercial4.bioextratus.model;
 
 import java.io.Serializable;
-
+import java.lang.String;
+import java.util.ArrayList;
 public class ProdutoModel implements Serializable {
-    private int codigo;
-    private String descricao;
-    private int grupo;
-    private int famLin;
-    private int linhaProd;
-    private   int volumetria;
-    private int tipo;
-    private int unidade;
-    private int armazem;
-    private int tePadrao;
-    private int tsPadrao;
-    private int segUnMed;
-    private int fatorConv;
-    private   int ordExp;
-    private int codBarras;
-    private int codBarras1;
-    private int codBarras2;
 
-    public ProdutoModel(int codigo, String descricao, int grupo, int famLin, int linhaProd, int volumetria, int tipo, int unidade, int armazem, int tePadrao, int tsPadrao, int segUnMed, int fatorConv, int ordExp, int codBarras, int codBarras1, int codBarras2) {
+    public int codigo;
+    public String descricao;
+    public int grupo;
+    public int famLin;
+    public int linhaProd;
+    public int volumetria;
+    public int tipo;
+    public int unidade;
+    public int armazem;
+    public int tePadrao;
+    public int tsPadrao;
+    public int segUnMed;
+    public int fatorConv;
+    public int tipoConv;
+    public int ordExp;
+    public int codBarras;
+    public int codBarras1;
+    public int codBarras2;
+
+    public ProdutoModel(int codigo, String descricao, int grupo, int famLin, int linhaProd, int volumetria, int tipo, int unidade, int armazem, int tePadrao, int tsPadrao, int segUnMed, int fatorConv, int tipoConv, int ordExp, int codBarras, int codBarras1, int codBarras2) {
         this.codigo = codigo;
         this.descricao = descricao;
         this.grupo = grupo;
@@ -35,14 +38,13 @@ public class ProdutoModel implements Serializable {
         this.tsPadrao = tsPadrao;
         this.segUnMed = segUnMed;
         this.fatorConv = fatorConv;
+        this.tipoConv = tipoConv;
         this.ordExp = ordExp;
         this.codBarras = codBarras;
         this.codBarras1 = codBarras1;
         this.codBarras2 = codBarras2;
     }
-    public String toString(){
-        return descricao.toString();
-    }
+
     public int getCodigo() {
         return codigo;
     }
@@ -147,6 +149,14 @@ public class ProdutoModel implements Serializable {
         this.fatorConv = fatorConv;
     }
 
+    public int getTipoConv() {
+        return tipoConv;
+    }
+
+    public void setTipoConv(int tipoConv) {
+        this.tipoConv = tipoConv;
+    }
+
     public int getOrdExp() {
         return ordExp;
     }
@@ -177,5 +187,29 @@ public class ProdutoModel implements Serializable {
 
     public void setCodBarras2(int codBarras2) {
         this.codBarras2 = codBarras2;
+    }
+
+    @Override
+    public String toString() {
+        return "ProdutoModel{" +
+                "codigo=" + codigo +
+                ", descricao='" + descricao + '\'' +
+                ", grupo=" + grupo +
+                ", famLin=" + famLin +
+                ", linhaProd=" + linhaProd +
+                ", volumetria=" + volumetria +
+                ", tipo=" + tipo +
+                ", unidade=" + unidade +
+                ", armazem=" + armazem +
+                ", tePadrao=" + tePadrao +
+                ", tsPadrao=" + tsPadrao +
+                ", segUnMed=" + segUnMed +
+                ", fatorConv=" + fatorConv +
+                ", tipoConv=" + tipoConv +
+                ", ordExp=" + ordExp +
+                ", codBarras=" + codBarras +
+                ", codBarras1=" + codBarras1 +
+                ", codBarras2=" + codBarras2 +
+                '}';
     }
 }

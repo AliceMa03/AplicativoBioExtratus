@@ -11,11 +11,10 @@ import android.widget.TextView;
 
 import com.example.infcomercial4.bioextratus.model.InventarioModel;
 import com.example.infcomercial4.bioextratus.interfaces.OnProductListener;
-
+import java.lang.Double;
 import java.util.UUID;
 
-public class ProductCreateFragment extends Fragment {
-
+public class InventarioCreateFragment extends Fragment {
     private EditText txtCodigo;
     private EditText txtDescricao;
     private EditText txtQuantidade;
@@ -29,7 +28,7 @@ public class ProductCreateFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View layout = inflater.inflate(R.layout.product_create_model, container, false);
+        View layout = inflater.inflate(R.layout.inventario_actitivty, container, false);
 
         this.model = new InventarioModel(UUID.randomUUID().toString(), "", "", 0);
 
@@ -58,10 +57,10 @@ public class ProductCreateFragment extends Fragment {
             public void onClick(View view) {
                 if (getActivity() instanceof OnProductListener){
                     OnProductListener listener = (OnProductListener)getActivity();
-                    model.quantidade = Double.valueOf(txtQuantidade.getText().toString());
+                    model.quantidade = Integer.valueOf(txtQuantidade.getText().toString());
                     model.descricao = txtDescricao.getText().toString();
                     model.lote = txtLote.getText().toString();
-                    model.armazem = txtArmazem.getText().toString();
+                    model.armazem =  Integer.valueOf(txtArmazem.getText().toString());
 
                     model.BarCode = lblCode.getText().toString();
 
@@ -88,6 +87,7 @@ public class ProductCreateFragment extends Fragment {
     public void setBarCode(String barcode){
         lblCode.setText(barcode);
     }
+
 
 }
 

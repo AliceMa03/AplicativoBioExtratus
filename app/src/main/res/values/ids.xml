@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="listView_Inventario" type="id" />
+    <item name="txtQuantidade" type="id" />
+    <item name="txtLote" type="id" />
+</resources>

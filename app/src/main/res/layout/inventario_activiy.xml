@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context="com.example.infcomercial4.bioextratus.CadastrarInventario">
+    android:layout_height="match_parent"
+    tools:context="com.example.infcomercial4.bioextratus.CadastrarInventario" >
 
 
     <TextView
@@ -98,4 +98,4 @@
         android:layout_height="wrap_content" />
 
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

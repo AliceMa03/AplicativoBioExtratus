@@ -1,4 +1,13 @@
  package com.example.infcomercial4.bioextratus;
+
+ import android.content.Intent;
+ import android.os.Bundle;
+ import android.support.v7.app.AppCompatActivity;
+ import android.widget.Button;
+ import android.widget.EditText;
+
+ import com.example.infcomercial4.bioextratus.model.ProdutoModel;
+
  public class FormularioProdutos extends AppCompatActivity {
      private EditText editCodigo;
      private EditText editGrupo;
@@ -17,31 +26,31 @@
      private EditText editCodBarras;
      private Button btnAlterar;
 
-     Produtos editarProduto;
+     ProdutoModel editarProduto;
 
      protected void onCreate(Bundle savedInstanceState){
 
          super.onCreate(savedInstanceState);
-         setContentView(R.layout.cadastrar_produto_activity);
+         setContentView(R.layout.cadastrar_produto_activiy);
 
          Intent intent = getIntent();
-         editarProduto= (Produtos)intent.getSerializabeExtra("produto-escolhido");
+         editarProduto= (ProdutoModel) intent.getSerializableExtra("produto-escolhido");
 
          editCodigo =(EditText)findViewById(R.id.editCodigo);
-         editGrupo =(EditText)findViewById(R.id.editCodigo);
-         editFamLin =(EditText)findViewById(R.id.editCodigo);
-         editLinhaProd =(EditText)findViewById(R.id.editCodigo);
-         editVolumetria =(EditText)findViewById(R.id.editCodigo);
-         editTipo =(EditText)findViewById(R.id.editCodigo);
-         editUnidade =(EditText)findViewById(R.id.editCodigo);
-         editArmazem =(EditText)findViewById(R.id.editCodigo);
-         editTEPadrao =(EditText)findViewById(R.id.editCodigo);
-         editTSPadrao =(EditText)findViewById(R.id.editCodigo);
-         editSegUnMed =(EditText)findViewById(R.id.editCodigo);
-         editFatorConv =(EditText)findViewById(R.id.editCodigo);
-         editOrdExp =(EditText)findViewById(R.id.editCodigo);
-         editCodBarras1 =(EditText)findViewById(R.id.editCodigo);
-         editCodBarras =(EditText)findViewById(R.id.editCodigo);
+         editGrupo =(EditText)findViewById(R.id.editGrupo);
+         editFamLin =(EditText)findViewById(R.id.editFamLin);
+         editLinhaProd =(EditText)findViewById(R.id.editLinhaProd);
+         editVolumetria =(EditText)findViewById(R.id.editVolumetria);
+         editTipo =(EditText)findViewById(R.id.editTipo);
+         editUnidade =(EditText)findViewById(R.id.editUnidade);
+         editArmazem =(EditText)findViewById(R.id.editArmazem);
+         editTEPadrao =(EditText)findViewById(R.id.editTEPadrao);
+         editTSPadrao =(EditText)findViewById(R.id.editTSPadrao);
+         editSegUnMed =(EditText)findViewById(R.id.editSegUnMed);
+         editFatorConv =(EditText)findViewById(R.id.editFatorCon);
+         editOrdExp =(EditText)findViewById(R.id.editOrdExp);
+         editCodBarras1 =(EditText)findViewById(R.id.editCodBarras1);
+         editCodBarras =(EditText)findViewById(R.id.editCodBarras);
          btnAlterar =(Button)findViewById(R.id.btnAlterar);
 
          if (editarProduto!=null){

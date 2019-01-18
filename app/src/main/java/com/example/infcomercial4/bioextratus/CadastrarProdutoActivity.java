@@ -11,9 +11,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.infcomercial4.bioextratus.BDbioextratus.ProdutosBD;
+import com.example.infcomercial4.bioextratus.fragments.ProdutosCreateFragment;
 import com.example.infcomercial4.bioextratus.model.ProdutoModel;
 
 import java.util.ArrayList;
@@ -42,6 +42,7 @@ public class CadastrarProdutoActivity extends AppCompatActivity {
     ArrayList<ProdutoModel> listView_Produtos;
     ProdutoModel produtos;
     ArrayAdapter adapter;
+    private ProdutosCreateFragment createFragment = null;
     protected void onCreate (Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -65,37 +66,41 @@ public class CadastrarProdutoActivity extends AppCompatActivity {
         btnIncluir =(Button) findViewById(R.id.btnIncluir);
         btnAlterar =(Button)findViewById(R.id.btnAlterar);
 
-        lista=(ListView)findViewById(R.id.listView_Produtos);
+
+        btnIncluir.setOnClickListener();
+        lista=(ListView)findViewById(R.id.);
+
         registerForContextMenu(lista);
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int i, long l) {
+                int position;
                 ProdutoModel produtoEscolhido = (ProdutoModel)adapter.getItemAtPosition(position);
-                Intent i = new Intent(CadastrarProdutoActivity.this,)
-                        i.putExtra("produto-esolhido",produtoEscolhido);
+                Intent i;
+                i = new Intent(String.valueOf(CadastrarProdutoActivity.this));
+                i.putExtra("produto-esolhido",produtoEscolhido);
 
             }
         });
 
 
-        btnIncluir.setOnClickListener(new android.view.View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent= new Intent(CadastrarProdutoActivity.this,ListaProdutos.class);
-                startActivity(intent);
-            }
-        });
+
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemLongClick(AdapterView<?> adapter, View view, int i, long l) {
-                produtos = (ProdutoModel)adapter.getItemAtPosition()
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+            }
+
+            public boolean onItemLongClick(AdapterView<?> adapter, View view, int i, long l) {
+                produtos = (ProdutoModel)adapter.getItemAtPosition(i);
                 return false;
             }
         });
 
 
     }
-    public void onCreateContextMenu(ContextMenu menu,View v,ContextMenu.ContextMenuInfo menuInfo){
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
         MenuItem menuDelete = menu.add("Deletar este produto");
         menuDelete.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
             public boolean onMenuItemClick(MenuItem item){
@@ -108,12 +113,11 @@ public class CadastrarProdutoActivity extends AppCompatActivity {
 
         });
     }
-    protected void onResume(){
-        super.onResume();
-        carregarProduto();
-    }
 
 
+
+
+    @Override
     protected void onResume(){
         super.onResume();
         carregarProduto();
@@ -136,5 +140,5 @@ public class CadastrarProdutoActivity extends AppCompatActivity {
 
 
 
-    }
+}
 

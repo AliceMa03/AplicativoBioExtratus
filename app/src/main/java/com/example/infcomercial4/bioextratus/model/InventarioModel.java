@@ -66,4 +66,21 @@ public class InventarioModel implements Serializable {
     public void setBarCode(String barCode) {
         BarCode = barCode;
     }
+
+    @Override
+    public String toString() {
+        return "InventarioModel{" +
+                "codigo=" + codigo +
+                ", descricao='" + descricao + '\'' +
+                ", quantidade=" + quantidade +
+                ", lote='" + lote + '\'' +
+                ", armazem=" + armazem +
+                ", BarCode='" + BarCode + '\'' +
+                '}';
+    }
+
+    public InventarioModel(String toString, String s, String s1, int i) {
+    }
+
+
 }
