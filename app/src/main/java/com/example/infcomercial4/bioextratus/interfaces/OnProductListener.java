@@ -7,3 +7,4 @@ public interface OnProductListener {
     void barcodeCapture(ProdutoModel model);
     void cancel();
 }
+

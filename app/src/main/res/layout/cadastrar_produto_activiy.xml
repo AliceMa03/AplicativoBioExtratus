@@ -314,7 +314,7 @@
         android:layout_height="wrap_content"
         android:text="Capturar Codigo de Barras"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="506dp" />
+        tools:layout_editor_absoluteY="524dp" />
 
 
 

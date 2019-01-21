@@ -49,25 +49,33 @@ public class CadastrarProdutoActivity extends AppCompatActivity {
         setContentView(R.layout.cadastrar_produto_activiy);
 
         editCodigo =(EditText)findViewById(R.id.editCodigo);
-        editGrupo =(EditText)findViewById(R.id.editCodigo);
-        editFamLin =(EditText)findViewById(R.id.editCodigo);
-        editLinhaProd =(EditText)findViewById(R.id.editCodigo);
-        editVolumetria =(EditText)findViewById(R.id.editCodigo);
-        editTipo =(EditText)findViewById(R.id.editCodigo);
-        editUnidade =(EditText)findViewById(R.id.editCodigo);
-        editArmazem =(EditText)findViewById(R.id.editCodigo);
-        editTEPadrao =(EditText)findViewById(R.id.editCodigo);
-        editTSPadrao =(EditText)findViewById(R.id.editCodigo);
-        editSegUnMed =(EditText)findViewById(R.id.editCodigo);
-        editFatorConv =(EditText)findViewById(R.id.editCodigo);
-        editOrdExp =(EditText)findViewById(R.id.editCodigo);
-        editCodBarras1 =(EditText)findViewById(R.id.editCodigo);
-        editCodBarras =(EditText)findViewById(R.id.editCodigo);
+        editGrupo =(EditText)findViewById(R.id.editGrupo);
+        editFamLin =(EditText)findViewById(R.id.editFamLin);
+        editLinhaProd =(EditText)findViewById(R.id.editLinhaProd);
+        editVolumetria =(EditText)findViewById(R.id.editVolumetria);
+        editTipo =(EditText)findViewById(R.id.editTipo);
+        editUnidade =(EditText)findViewById(R.id.editUnidade);
+        editArmazem =(EditText)findViewById(R.id.editArmazem);
+        editTEPadrao =(EditText)findViewById(R.id.editTEPadrao);
+        editTSPadrao =(EditText)findViewById(R.id.editTSPadrao);
+        editSegUnMed =(EditText)findViewById(R.id.editSegUnMed);
+        editFatorConv =(EditText)findViewById(R.id.editFatorCon);
+        editOrdExp =(EditText)findViewById(R.id.editOrdExp);
+        editCodBarras1 =(EditText)findViewById(R.id.editCodBarras1);
+        editCodBarras =(EditText)findViewById(R.id.editCodBarras);
         btnIncluir =(Button) findViewById(R.id.btnIncluir);
         btnAlterar =(Button)findViewById(R.id.btnAlterar);
 
 
-        btnIncluir.setOnClickListener();
+        btnIncluir.setOnClickListener(new android.view.View.OnClickListener(){
+            public void onClick(View v){
+
+                Intent intent = new Intent(CadastrarProdutoActivity.this, FormularioProdutos.class);
+                startActivity(intent);
+
+            }
+
+        });
         //lista=(ListView)findViewById(R.id.);
 
         registerForContextMenu(lista);
@@ -75,10 +83,9 @@ public class CadastrarProdutoActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int i, long l) {
                 int position;
-                ProdutoModel produtoEscolhido = (ProdutoModel)adapter.getItemAtPosition(position);
-                Intent i;
-                i = new Intent(String.valueOf(CadastrarProdutoActivity.this));
-                i.putExtra("produto-esolhido",produtoEscolhido);
+                //ProdutoModel produtoEscolhido = (ProdutoModel)adapter.getItemAtPosition(position);
+                //Intent i = new Intent(String.valueOf(CadastrarProdutoActivity.this));
+                //i.putExtra("produto-esolhido",produtoEscolhido);
 
             }
         });
@@ -125,7 +132,7 @@ public class CadastrarProdutoActivity extends AppCompatActivity {
     }
     public void carregarProduto(){
         bd= new ProdutosBD(CadastrarProdutoActivity.this);
-        listView_Produtos= bd.getLista();
+        //listView_Produtos= bd.getLista();
         bd.close();
 
         if(listView_Produtos != null){

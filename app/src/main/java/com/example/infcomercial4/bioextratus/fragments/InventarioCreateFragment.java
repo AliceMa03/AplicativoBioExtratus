@@ -9,9 +9,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.infcomercial4.bioextratus.interfaces.OnInventarioListener;
 import com.example.infcomercial4.bioextratus.model.InventarioModel;
 import com.example.infcomercial4.bioextratus.interfaces.OnProductListener;
 import java.lang.Double;
+import com.example.infcomercial4.bioextratus.R;
 import java.util.UUID;
 
 public class InventarioCreateFragment extends Fragment {
@@ -28,7 +30,7 @@ public class InventarioCreateFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View layout = inflater.inflate(R.layout.inventario_actitiviy, container, false);
+        View layout = inflater.inflate(R.layout.inventario_activity, container, false);
 
         this.model = new InventarioModel(UUID.randomUUID().toString(), "", "", 0);
 
@@ -43,8 +45,9 @@ public class InventarioCreateFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if (getActivity() instanceof OnProductListener) {
-                    OnProductListener listener = (OnProductListener) getActivity();
+                if (getActivity() instanceof OnInventarioListener) {
+                    OnInventarioListener listener = (OnInventarioListener) getActivity();
+
                     listener.barcodeCapture(model);
                 }
             }
@@ -55,8 +58,8 @@ public class InventarioCreateFragment extends Fragment {
         this.btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (getActivity() instanceof OnProductListener){
-                    OnProductListener listener = (OnProductListener)getActivity();
+                if (getActivity() instanceof OnInventarioListener){
+                    OnInventarioListener listener = (OnInventarioListener)getActivity();
                     model.quantidade = Integer.valueOf(txtQuantidade.getText().toString());
                     model.descricao = txtDescricao.getText().toString();
                     model.lote = txtLote.getText().toString();

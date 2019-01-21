@@ -12,6 +12,7 @@ import java.lang.String;
 import java.util.ArrayList;
 
 import com.example.infcomercial4.bioextratus.CadastrarInventario;
+import com.example.infcomercial4.bioextratus.model.InventarioModel;
 import com.example.infcomercial4.bioextratus.model.ProdutoModel;
 public class ProdutosBD extends SQLiteOpenHelper {
 
@@ -56,7 +57,7 @@ public class ProdutosBD extends SQLiteOpenHelper {
         values.put("ordExp", produtos.getOrdExp());
         values.put("codBarras", produtos.getCodBarras());
         values.put("codBarras1", produtos.getCodBarras1());
-        values.put("tipoConv",produtos.getTipoConv());
+        values.put("tipoConv", produtos.getTipoConv());
 
         getWritableDatabase().insert("produtos", null, values);
     }
@@ -78,25 +79,26 @@ public class ProdutosBD extends SQLiteOpenHelper {
         values.put("ordExp", produtos.getOrdExp());
         values.put("codBarras", produtos.getCodBarras());
         values.put("codBarras1", produtos.getCodBarras1());
-        values.put("tipoConv",produtos.getTipoConv());
+        values.put("tipoConv", produtos.getTipoConv());
 
         getWritableDatabase().insert("produtos", null, values);
-
         String[] args = {DATABASE.toString()};
         getWritableDatabase().update("produtos", values, "codigo=?", args);
+    }
+
+
+
+
+        public void deletarProduto(ProdutoModel produtos) {
+            String[] args = {DATABASE.toString()};
+            getWritableDatabase().delete("inventario", "codigo=?", args);
+
+
+        }
 
 
     }
 
-    public void deletarProduto(ProdutoModel produtos) {
-        String[] args = {DATABASE.toString()};
-        getWritableDatabase().delete("produtos", "codigo=?", args);
-
-
-    }
-
-
-}
 
 
 

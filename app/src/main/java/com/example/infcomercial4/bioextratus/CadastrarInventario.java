@@ -12,7 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import com.example.infcomercial4.bioextratus.BDbioextratus.ProdutosBD;
+import com.example.infcomercial4.bioextratus.BDbioextratus.InventarioBD;
 import com.example.infcomercial4.bioextratus.model.InventarioModel;
 
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class CadastrarInventario extends AppCompatActivity {
     private Button btnCancel;
     private Object view;
     ListView lista;
-    ProdutosBD bd;
+    InventarioBD bd;
     ArrayList<InventarioModel> listView_Inventario;
     InventarioModel inventario;
     ArrayAdapter adapter;
@@ -40,7 +40,7 @@ public class CadastrarInventario extends AppCompatActivity {
         txtCodigo =(EditText)findViewById(R.id.txtCodigo);
         txtDescricao =(EditText)findViewById(R.id.txtDescricao);
         txtQuantidade =(EditText)findViewById(R.id.txtQuantidade);
-        txtLote =(EditText)findViewById(R.id.txtL);
+        txtLote =(EditText)findViewById(R.id.txtLote);
         txtArmazem =(EditText)findViewById(R.id.txtArmazem);
 
         btnCapture =(Button) findViewById(R.id.btnIncluir);
@@ -52,9 +52,9 @@ public class CadastrarInventario extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int i, long l) {
-                InventarioModel produtoEscolhido = (InventarioModel)adapter.getItemAtPosition(position);
-                Intent i = new Intent(String.valueOf(CadastrarInventario.this));
-                i.putExtra("produto-esolhido",produtoEscolhido);
+                //InventarioModel produtoEscolhido = (InventarioModel)adapter.getItemAtPosition(i);
+                //Intent i = new Intent(String.valueOf(CadastrarInventario.this));
+                //i.putExtra("produto-esolhido",produtoEscolhido);
 
             }
         });
@@ -67,9 +67,9 @@ public class CadastrarInventario extends AppCompatActivity {
 
             }
 
-            @Override
-            public void onItemLongClick(AdapterView<?> adapter, View view, int i, long l) {
-                inventario = (InventarioModel)adapter.getItemAtPosition();
+
+            public boolean onItemLongClick(AdapterView<?> adapter, View view, int i, long l) {
+                inventario = (InventarioModel)adapter.getItemAtPosition(i);
                 return false;
             }
         });
@@ -80,10 +80,10 @@ public class CadastrarInventario extends AppCompatActivity {
         MenuItem menuDelete = menu.add("Deletar este produto");
         menuDelete.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
             public boolean onMenuItemClick(MenuItem item){
-                bd= new ProdutosBD((CadastrarInventario.this));
+                bd= new InventarioBD((CadastrarInventario.this));
                 bd.deletarProduto(inventario);
                 bd.close();
-                carregarProduto();
+                //carregarProduto();
                 return true;
             }
 
@@ -91,7 +91,7 @@ public class CadastrarInventario extends AppCompatActivity {
     }
     protected void onResume(){
         super.onResume();
-        carregarProduto();
+        //carregarProduto();
     }
 
 

@@ -3,8 +3,10 @@
  import android.content.Intent;
  import android.os.Bundle;
  import android.support.v7.app.AppCompatActivity;
+ import android.view.View;
  import android.widget.Button;
  import android.widget.EditText;
+ import java.lang.String;
 
  import com.example.infcomercial4.bioextratus.model.ProdutoModel;
 
@@ -26,7 +28,7 @@
      private EditText editCodBarras;
      private Button btnAlterar;
 
-     ProdutoModel editarProduto;
+     ProdutoModel editarProduto, produtos;
 
      protected void onCreate(Bundle savedInstanceState){
 
@@ -58,6 +60,30 @@
          }else{
              btnAlterar.setText("Cadastrar");
          }
+
+         btnAlterar.setOnClickListener(new View.OnClickListener(){
+             public void onClick(View v){
+
+                produtos.setCodigo(Integer.parseInt(editCodigo.getText().toString()));
+
+                produtos.setArmazem(Integer.parseInt(editArmazem.getText().toString()));
+                produtos.setCodBarras(Integer.parseInt(editCodBarras.getText().toString()));
+                produtos.setCodBarras1(Integer.parseInt(editCodBarras1.getText().toString()));
+                //produtos.setDescricao(editDescricao.getText().toString());
+                produtos.setCodBarras1(Integer.parseInt(editCodBarras1.getText().toString()));
+                produtos.setOrdExp(Integer.parseInt(editOrdExp.getText().toString()));
+                produtos.setGrupo(Integer.parseInt(editGrupo.getText().toString()));
+                produtos.setFamLin(Integer.parseInt(editFamLin.getText().toString()));
+                produtos.setFatorConv(Integer.parseInt(editFatorConv.getText().toString()));
+                produtos.setLinhaProd(Integer.parseInt(editLinhaProd.getText().toString()));
+                produtos.setTipo(Integer.parseInt(editTipo.getText().toString()));
+                produtos.setTsPadrao(Integer.parseInt(editTSPadrao.getText().toString()));
+                produtos.setTePadrao(Integer.parseInt(editTEPadrao.getText().toString()));
+
+             }
+
+
+         });
      }
 
 
