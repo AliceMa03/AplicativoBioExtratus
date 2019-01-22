@@ -101,8 +101,8 @@
 
     <Button
         android:id="@+id/btnCapture"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="187dp"
+        android:layout_height="86dp"
         android:background="@color/colorPrimaryDark"
         android:text="Capturar Codigo de Barras"
         android:textColor="@android:color/background_light"
@@ -111,23 +111,33 @@
 
     <Button
         android:id="@+id/btnAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="193dp"
+        android:layout_height="85dp"
         android:background="@color/colorPrimaryDark"
         android:text="Adicionar"
         android:textColor="@android:color/background_light"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="593dp" />
+        tools:layout_editor_absoluteX="218dp"
+        tools:layout_editor_absoluteY="533dp" />
 
     <Button
         android:id="@+id/btnCancel"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="192dp"
+        android:layout_height="88dp"
         android:background="@color/colorPrimaryDark"
-        android:text="Cancelar"
+        android:text="Excluir"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="638dp" />
+
+    <Button
+        android:id="@+id/btnCancel2"
+        android:layout_width="192dp"
+        android:layout_height="90dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Editar"
         android:textColor="@android:color/background_light"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="658dp" />
+        tools:layout_editor_absoluteY="638dp" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar3"

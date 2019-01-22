@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.infcomercial4.bioextratus.CadastrarProdutoActivity" >
+    tools:context="com.example.infcomercial4.bioextratus.CadastrarProdutoActivity">
 
     <EditText
         android:id="@+id/editTEPadrao"
@@ -253,23 +252,33 @@
 
     <Button
         android:id="@+id/btnIncluir"
-        android:layout_width="422dp"
-        android:layout_height="40dp"
+        android:layout_width="188dp"
+        android:layout_height="75dp"
         android:background="@color/colorPrimaryDark"
         android:text="Incluir"
         android:textColor="@android:color/background_light"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="623dp" />
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="565dp" />
 
     <Button
         android:id="@+id/btnAlterar"
-        android:layout_width="408dp"
-        android:layout_height="41dp"
+        android:layout_width="184dp"
+        android:layout_height="72dp"
         android:background="@color/colorPrimaryDark"
         android:text="Alterar"
         android:textColor="@android:color/background_light"
         tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="674dp" />
+        tools:layout_editor_absoluteY="659dp" />
+
+    <Button
+        android:id="@+id/btnAlterar2"
+        android:layout_width="192dp"
+        android:layout_height="75dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="Excluir"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="659dp" />
 
     <EditText
         android:id="@+id/editCodigo"
@@ -310,8 +319,8 @@
 
     <Button
         android:id="@+id/btnCapture"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="188dp"
+        android:layout_height="79dp"
         android:background="@color/colorPrimaryDark"
         android:text="Capturar Codigo de Barras"
         android:textColor="@android:color/background_light"
@@ -366,5 +375,15 @@
         app:srcCompat="@drawable/logo"
         tools:layout_editor_absoluteX="39dp"
         tools:layout_editor_absoluteY="9dp" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginLeft="148dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/barcode_capture"
+        tools:layout_editor_absoluteY="608dp" />
 
 </android.support.constraint.ConstraintLayout>

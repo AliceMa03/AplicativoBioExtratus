@@ -15,6 +15,8 @@ import android.widget.ListView;
 import com.example.infcomercial4.bioextratus.BDbioextratus.ProdutosBD;
 import com.example.infcomercial4.bioextratus.fragments.ProdutosCreateFragment;
 import com.example.infcomercial4.bioextratus.model.ProdutoModel;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import java.util.ArrayList;
 
@@ -141,6 +143,22 @@ public class CadastrarProdutoActivity extends AppCompatActivity {
         }
         finish();
 
+    }
+
+    public void barcodeCapture(ProdutoModel model) {
+        IntentIntegrator intent = new IntentIntegrator(CadastrarProdutoActivity.this);
+        intent.initiateScan();
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null){
+            String barcode = result.getContents();
+            if (barcode != null && !"".equals(barcode)){
+                createFragment.setBarCode(barcode);
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
     }
 
 

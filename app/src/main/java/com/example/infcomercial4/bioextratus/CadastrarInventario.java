@@ -14,6 +14,9 @@ import android.widget.ListView;
 
 import com.example.infcomercial4.bioextratus.BDbioextratus.InventarioBD;
 import com.example.infcomercial4.bioextratus.model.InventarioModel;
+import com.example.infcomercial4.bioextratus.fragments.InventarioCreateFragment;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import java.util.ArrayList;
 
@@ -32,6 +35,7 @@ public class CadastrarInventario extends AppCompatActivity {
     ArrayList<InventarioModel> listView_Inventario;
     InventarioModel inventario;
     ArrayAdapter adapter;
+    private InventarioCreateFragment createFragment = null;
     protected void onCreate (Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
@@ -52,7 +56,7 @@ public class CadastrarInventario extends AppCompatActivity {
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapter, View view, int i, long l) {
-                //InventarioModel produtoEscolhido = (InventarioModel)adapter.getItemAtPosition(i);
+                InventarioModel produtoEscolhido = (InventarioModel)adapter.getItemAtPosition(i);
                 //Intent i = new Intent(String.valueOf(CadastrarInventario.this));
                 //i.putExtra("produto-esolhido",produtoEscolhido);
 
@@ -94,7 +98,22 @@ public class CadastrarInventario extends AppCompatActivity {
         //carregarProduto();
     }
 
+    public void barcodeCapture(InventarioModel model) {
+        IntentIntegrator intent = new IntentIntegrator(CadastrarInventario.this);
+        intent.initiateScan();
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if (result != null){
+            String barcode = result.getContents();
+            if (barcode != null && !"".equals(barcode)){
+                createFragment.setBarCode(barcode);
 
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
 
 
 
