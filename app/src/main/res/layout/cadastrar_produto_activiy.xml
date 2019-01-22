@@ -14,8 +14,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="185dp" />
+        tools:layout_editor_absoluteX="268dp"
+        tools:layout_editor_absoluteY="251dp" />
 
     <EditText
         android:id="@+id/editTSPadrao"
@@ -24,8 +24,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="93dp"
-        tools:layout_editor_absoluteY="236dp" />
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="299dp" />
 
     <EditText
         android:id="@+id/editSegUnMed"
@@ -34,8 +34,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="279dp"
-        tools:layout_editor_absoluteY="236dp" />
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="299dp" />
 
     <EditText
         android:id="@+id/editFatorCon"
@@ -44,8 +44,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="275dp" />
+        tools:layout_editor_absoluteX="282dp"
+        tools:layout_editor_absoluteY="346dp" />
 
     <EditText
         android:id="@+id/editOrdExp"
@@ -54,8 +54,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="323dp" />
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="393dp" />
 
     <EditText
         android:id="@+id/editTipo"
@@ -64,8 +64,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="146dp" />
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="201dp" />
 
     <EditText
         android:id="@+id/editUnidade"
@@ -75,7 +75,7 @@
         android:inputType="textPersonName"
         android:text=""
         tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="146dp" />
+        tools:layout_editor_absoluteY="201dp" />
 
     <EditText
         android:id="@+id/editArmazem"
@@ -84,8 +84,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="185dp" />
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="251dp" />
 
     <EditText
         android:id="@+id/editLinhaProd"
@@ -94,8 +94,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="86dp"
-        tools:layout_editor_absoluteY="107dp" />
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="148dp" />
 
     <EditText
         android:id="@+id/editVolumetria"
@@ -104,112 +104,112 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="282dp"
-        tools:layout_editor_absoluteY="107dp" />
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="148dp" />
 
     <TextView
         android:id="@+id/txtCodigo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Código:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="66dp" />
 
     <TextView
-    android:id="@+id/txtDescricao"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Descrição:"
-    tools:layout_editor_absoluteX="16dp"
-    tools:layout_editor_absoluteY="49dp" />
+        android:id="@+id/txtDescricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descrição:"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="96dp" />
 
     <TextView
         android:id="@+id/txtGrupo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Grupo:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="82dp" />
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="129dp" />
 
     <TextView
         android:id="@+id/txtFamilia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Família Linha:"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="82dp" />
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="129dp" />
 
     <TextView
         android:id="@+id/txtLinha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Linha Prod:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="120dp" />
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="168dp" />
 
     <TextView
         android:id="@+id/txtVolumetria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Volumetria:"
-        tools:layout_editor_absoluteX="200dp"
-        tools:layout_editor_absoluteY="120dp" />
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="161dp" />
 
     <TextView
         android:id="@+id/txtTipo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tipo:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="162dp" />
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="221dp" />
 
     <TextView
         android:id="@+id/txtUnidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Unidade:"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="162dp" />
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="212dp" />
 
     <TextView
         android:id="@+id/txtArmazem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Armazém:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="201dp" />
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="258dp" />
 
     <TextView
         android:id="@+id/txtTePadrao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TE Padrão:"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="201dp" />
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="258dp" />
 
     <TextView
         android:id="@+id/txtTsPadrao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TS Padrão:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="246dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="310dp" />
 
     <TextView
         android:id="@+id/txtSegUnMed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Seg.Un.Med:"
-        tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="246dp" />
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="310dp" />
 
     <TextView
         android:id="@+id/txtTipoConv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Tipo de Conv:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="293dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="365dp" />
 
     <TextView
         android:id="@+id/txtFatorConv"
@@ -217,59 +217,59 @@
         android:layout_height="wrap_content"
         android:text="Fator Conv:"
         tools:layout_editor_absoluteX="194dp"
-        tools:layout_editor_absoluteY="293dp" />
+        tools:layout_editor_absoluteY="366dp" />
 
     <TextView
         android:id="@+id/txtOrdExp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ord Exp:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="336dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="404dp" />
 
     <TextView
         android:id="@+id/txtCodBarras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Código de Barras:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="373dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="451dp" />
 
     <TextView
         android:id="@+id/txtCodBarras1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Código de Barras 1:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="410dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="489dp" />
 
     <TextView
         android:id="@+id/txtCodBarras2"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:text="Código de Barras 2:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="448dp" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="528dp" />
 
     <Button
         android:id="@+id/btnIncluir"
-        android:layout_width="83dp"
+        android:layout_width="422dp"
         android:layout_height="40dp"
         android:background="@color/colorPrimaryDark"
         android:text="Incluir"
-        android:textColor="@color/colorText"
-        tools:layout_editor_absoluteX="165dp"
-        tools:layout_editor_absoluteY="466dp" />
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="623dp" />
 
     <Button
         android:id="@+id/btnAlterar"
-        android:layout_width="87dp"
+        android:layout_width="408dp"
         android:layout_height="41dp"
-        android:text="Alterar"
         android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorText"
-        tools:layout_editor_absoluteX="281dp"
-        tools:layout_editor_absoluteY="465dp" />
+        android:text="Alterar"
+        android:textColor="@android:color/background_light"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="674dp" />
 
     <EditText
         android:id="@+id/editCodigo"
@@ -278,8 +278,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="66dp" />
 
     <EditText
         android:id="@+id/editGrupo"
@@ -288,8 +288,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="82dp" />
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="129dp" />
 
     <EditText
         android:id="@+id/editFamLin"
@@ -298,24 +298,25 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:layout_editor_absoluteX="282dp"
-        tools:layout_editor_absoluteY="68dp" />
+        tools:layout_editor_absoluteX="273dp"
+        tools:layout_editor_absoluteY="115dp" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="65dp"
         android:layout_height="20dp"
         tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="292dp" />
+        tools:layout_editor_absoluteY="365dp" />
 
     <Button
         android:id="@+id/btnCapture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
         android:text="Capturar Codigo de Barras"
+        android:textColor="@android:color/background_light"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="524dp" />
-
+        tools:layout_editor_absoluteY="565dp" />
 
 
     <EditText
@@ -326,7 +327,7 @@
         android:inputType="textPersonName"
         android:text=""
         tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="362dp" />
+        tools:layout_editor_absoluteY="432dp" />
 
     <EditText
         android:id="@+id/editCodBarras1"
@@ -336,6 +337,34 @@
         android:inputType="textPersonName"
         android:text=""
         tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="400dp" />
+        tools:layout_editor_absoluteY="470dp" />
+
+    <EditText
+        android:id="@+id/editCodBarras2"
+        android:layout_width="210dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="508dp" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="414dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="333dp"
+        android:layout_height="49dp"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="9dp" />
 
 </android.support.constraint.ConstraintLayout>
